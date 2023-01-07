@@ -9,7 +9,7 @@
 <body>
     <h2>Are You Sure You Want To Delete <%= selectedBook.title %> ?</h2>
     <a href="http://localhost:3000/"><button>Home Page</button></a><br><br>
-    <form id="deletion" action= "/delete/<%= selectedBook._id %>" method="DELETE">
+    <form id="deletion" action= "/delete/<%= selectedBook._id %>" method="POST">
         <label for="deleteInput">Deleting Book:</label><br>
         <input type="hidden" id="deleteInput" name="deleteInput"><br> 
         <input type="submit" value="Submit">

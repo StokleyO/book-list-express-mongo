@@ -119,13 +119,20 @@ app.post('/update/:id', (req, res) => {
         }
         })
 
-    app.delete('/delete/:id', (req, res) => {
+    app.post('/delete/:id', (req, res) => {
         Book.deleteOne({"_id": `${req.params.id}`}).then(function(){
             console.log("Data deleted")
         })
-        res.send('book has been deleted')
-        res.redirect('http://localhost:3000/')
+        res.redirect('/')
         })
+
+        app.delete('/delete/:id', (req, res) => {
+            Book.deleteOne({"_id": `${req.params.id}`}).then(function(){
+                console.log("Data deleted")
+            })
+            res.send('book has been deleted')
+            res.redirect('http://localhost:3000/')
+            })
 
 app.listen(3000)
 
