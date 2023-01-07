@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Add a Book</h2>
+    <form action="/add" method="POST">
+        <label for="title">Book Title:</label><br>
+        <input type="text" id="title" name="title"><br> 
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author"><br>
+        <label for="release">Date Of Release:</label><br>
+        <input type="date" id="release" name="release"><br>
+        <label for="pages">Number of Pages:</label><br>
+        <input type="number" id="pages" name="pages"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

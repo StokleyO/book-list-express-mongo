@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Updating <%= selectedBook.title %></h2>
+    <a href="http://localhost:3000/"><button>Home Page</button></a><br><br>
+    <form action= "/update/<%= selectedBook._id %>" method="POST">
+        <label for="title">Book Title:</label><br>
+        <input type="text" id="title" name="title" value="<%= selectedBook.title %>"><br> 
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" value="<%= selectedBook.author %>"><br>
+        <label for="release">Date Of Release:</label><br>
+        <input type="date" id="release" name="release" value="<%= selectedBook.release.toISOString().substring(0, 10) %>"><br>
+        <label for="pages">Number of Pages:</label><br>
+        <input type="number" id="pages" name="pages" value="<%= selectedBook.pages %>"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
